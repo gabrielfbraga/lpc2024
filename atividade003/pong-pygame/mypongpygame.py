@@ -46,8 +46,8 @@ player_2_y = 300
 ball = pygame.image.load("pong-pygame/assets/ball.png")
 ball_x = 640
 ball_y = 360
-ball_dx = 5
-ball_dy = 5
+ball_dx = 6
+ball_dy = 6
 
 # score
 score_1 = 0
@@ -144,7 +144,13 @@ while game_loop:
             player_1_y = 570
 
         # player 2 "Artificial Intelligence"
-        player_2_y = ball_y
+        player_2_spped = 5.78 
+
+        if player_2_y < ball_y - 25:
+            player_2_y += player_2_spped
+        elif player_2_y > ball_y + 25:
+            player_2_y -= player_2_spped
+        
         if player_2_y <= 0:
             player_2_y = 0
         elif player_2_y >= 570:
