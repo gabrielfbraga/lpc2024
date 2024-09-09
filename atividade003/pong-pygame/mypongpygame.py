@@ -144,12 +144,12 @@ while game_loop:
             player_1_y = 570
 
         # player 2 "Artificial Intelligence"
-        player_2_spped = 5.78 
+        player_2_speed = 5.80 
 
         if player_2_y < ball_y - 25:
-            player_2_y += player_2_spped
+            player_2_y += player_2_speed
         elif player_2_y > ball_y + 25:
-            player_2_y -= player_2_spped
+            player_2_y -= player_2_speed
         
         if player_2_y <= 0:
             player_2_y = 0
